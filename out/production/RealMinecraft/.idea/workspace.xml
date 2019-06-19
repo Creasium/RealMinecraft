@@ -1,7 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="0c55d5df-c56f-49bd-944d-0fe493f17ed9" name="Default Changelist" comment="" />
+    <list default="true" id="0c55d5df-c56f-49bd-944d-0fe493f17ed9" name="Default Changelist" comment="Internal commit">
+      <change afterPath="$PROJECT_DIR$/src/me/kristopher/realcraft/listener/AttackListener.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/me/kristopher/realcraft/listener/PlayerListener.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RealMinecraft.iml" beforeDir="false" afterPath="$PROJECT_DIR$/RealMinecraft.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/RealMinecraft/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/RealMinecraft/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/RealMinecraft/META-INF/RealMinecraft.kotlin_module" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/RealMinecraft/META-INF/RealMinecraft.kotlin_module" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/RealMinecraft/RealMinecraft.iml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/RealMinecraft/RealMinecraft.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/RealMinecraft/me/kristopher/realcraft/Realcraft.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/RealMinecraft/me/kristopher/realcraft/Realcraft.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/RealMinecraft/me/kristopher/realcraft/listener/BlockListener.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/RealMinecraft/me/kristopher/realcraft/listener/BlockListener.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/RealMinecraft/me/kristopher/realcraft/objects/Messages.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/RealMinecraft/me/kristopher/realcraft/objects/Messages.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/RealMinecraft/me/kristopher/realcraft/objects/Recipe.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/RealMinecraft/me/kristopher/realcraft/objects/Recipe.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/me/kristopher/realcraft/Realcraft.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/me/kristopher/realcraft/Realcraft.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/me/kristopher/realcraft/listener/BlockListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/me/kristopher/realcraft/listener/BlockListener.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/me/kristopher/realcraft/objects/Messages.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/me/kristopher/realcraft/objects/Messages.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/me/kristopher/realcraft/objects/Recipe.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/me/kristopher/realcraft/objects/Recipe.java" afterDir="false" />
+    </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -10,33 +26,45 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="DefaultGradleProjectSettings">
-    <option name="testRunner" value="GRADLE" />
-    <option name="delegatedBuild" value="true" />
+    <option name="isMigrated" value="true" />
   </component>
   <component name="FavoritesManager">
     <favorites_list name="RealMinecraft" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/me/kristopher/realcraft/Realcraft.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="594">
-              <caret line="45" column="1" selection-start-line="45" selection-start-column="1" selection-end-line="45" selection-end-column="1" />
+            <state relative-caret-position="36">
+              <caret line="12" column="56" selection-start-line="12" selection-start-column="56" selection-end-line="12" selection-end-column="56" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/me/kristopher/realcraft/listener/PlayerListener.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="432">
+              <caret line="26" column="67" lean-forward="true" selection-start-line="26" selection-start-column="67" selection-end-line="26" selection-end-column="67" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/me/kristopher/realcraft/listener/InventoryListener.java">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/me/kristopher/realcraft/listener/BlockListener.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="242">
-              <caret line="60" column="21" lean-forward="true" selection-start-line="60" selection-start-column="21" selection-end-line="60" selection-end-column="21" />
+            <state relative-caret-position="288">
+              <caret line="28" column="44" selection-start-line="28" selection-start-column="44" selection-end-line="28" selection-end-column="44" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -44,30 +72,105 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/me/kristopher/realcraft/objects/Messages.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="270">
-              <caret line="15" column="4" selection-start-line="15" selection-start-column="4" selection-end-line="15" selection-end-column="4" />
+            <state relative-caret-position="598">
+              <caret line="42" column="28" lean-forward="true" selection-start-line="42" selection-start-column="28" selection-end-line="42" selection-end-column="28" />
             </state>
           </provider>
         </entry>
       </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/me/kristopher/realcraft/listener/InventoryListener.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="36">
+              <caret line="2" selection-start-line="2" selection-end-line="2" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/me/kristopher/realcraft/listener/AttackListener.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="486">
+              <caret line="35" column="27" selection-start-line="35" selection-start-column="27" selection-end-line="35" selection-end-column="27" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/me/kristopher/realcraft/objects/Recipe.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="504">
+              <caret line="36" column="157" selection-start-line="36" selection-start-column="157" selection-end-line="36" selection-end-column="157" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/me/kristopher/realcraft/objects/WoodworkerConfig.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="90">
+              <caret line="13" column="21" selection-start-line="13" selection-start-column="21" selection-end-line="13" selection-end-column="21" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/me/kristopher/realcraft/objects/ConfigManager.java">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
     </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>BlockListener</find>
+      <find>messages</find>
+    </findStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="ROOT_SYNC" value="DONT_SYNC" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/.flooignore" />
+        <option value="$PROJECT_DIR$/src/me/kristopher/realcraft/objects/WoodworkerConfig.java" />
+        <option value="$PROJECT_DIR$/src/me/kristopher/realcraft/objects/Recipe.java" />
+        <option value="$PROJECT_DIR$/src/me/kristopher/realcraft/listener/AttackListener.java" />
+        <option value="$PROJECT_DIR$/src/me/kristopher/realcraft/listener/HeightListener.java" />
+        <option value="$PROJECT_DIR$/src/me/kristopher/realcraft/objects/Player.java" />
         <option value="$PROJECT_DIR$/src/me/kristopher/realcraft/Realcraft.java" />
-        <option value="$PROJECT_DIR$/src/me/kristopher/realcraft/objects/Messages.java" />
+        <option value="$PROJECT_DIR$/src/me/kristopher/realcraft/listener/InventoryListener.java" />
         <option value="$PROJECT_DIR$/src/me/kristopher/realcraft/listener/BlockListener.java" />
+        <option value="$PROJECT_DIR$/src/me/kristopher/realcraft/listener/PlayerListener.java" />
+        <option value="$PROJECT_DIR$/src/me/kristopher/realcraft/objects/Messages.java" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="366" />
-    <option name="y" value="19" />
-    <option name="width" value="1400" />
-    <option name="height" value="1000" />
+    <option name="x" value="335" />
+    <option name="y" value="-18" />
+    <option name="width" value="1225" />
+    <option name="height" value="1080" />
   </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
@@ -114,10 +217,6 @@
               <item name="realcraft" type="462c0819:PsiDirectoryNode" />
               <item name="util" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="RealMinecraft" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-            </path>
           </expand>
           <select />
         </subPane>
@@ -125,13 +224,15 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
+    <property name="ChangesTree.GroupingKeys" value="module&#10;directory" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Test server/plugins" />
-    <property name="project.structure.last.edited" value="Artifacts" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors.General" />
+    <property name="settings.editor.selected.configurable" value="preferences.keymap" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -145,6 +246,22 @@
       </list>
     </option>
   </component>
+  <component name="RunManager">
+    <configuration name="Debug Spigot" type="Remote">
+      <module name="RealMinecraft" />
+      <option name="USE_SOCKET_TRANSPORT" value="true" />
+      <option name="SERVER_MODE" value="false" />
+      <option name="SHMEM_ADDRESS" />
+      <option name="HOST" value="localhost" />
+      <option name="PORT" value="5005" />
+      <option name="AUTO_RESTART" value="false" />
+      <RunnerSettings RunnerId="Debug">
+        <option name="DEBUG_PORT" value="5005" />
+        <option name="LOCAL" value="false" />
+      </RunnerSettings>
+      <method v="2" />
+    </configuration>
+  </component>
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -157,38 +274,61 @@
       <updated>1560805581851</updated>
       <workItem from="1560805595313" duration="100000" />
       <workItem from="1560805854677" duration="905000" />
-      <workItem from="1560807099379" duration="2609000" />
+      <workItem from="1560807099379" duration="16823000" />
+      <workItem from="1560825606840" duration="91000" />
+      <workItem from="1560860708602" duration="1674000" />
+      <workItem from="1560862475262" duration="5421000" />
+      <workItem from="1560869580815" duration="156000" />
+      <workItem from="1560924299076" duration="15269000" />
     </task>
+    <task id="LOCAL-00001" summary="First commit files">
+      <created>1560861967231</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1560861967231</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="3614000" />
+    <option name="totallyTimeSpent" value="40439000" />
+  </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1096" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4991119" visible="true" weight="0.18176973" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4991119" visible="true" weight="0.19349681" />
       <window_info id="Structure" order="1" sideWeight="0.5008881" side_tool="true" weight="0.18017058" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
       <window_info id="UI Designer" order="4" />
       <window_info id="Capture Tool" order="5" />
       <window_info id="Favorites" order="6" sideWeight="0.5008881" side_tool="true" weight="0.18017058" />
-      <window_info active="true" anchor="bottom" id="Messages" visible="true" weight="0.32987553" />
       <window_info anchor="bottom" id="Docker" order="0" show_stripe_button="false" />
       <window_info anchor="bottom" id="Message" order="1" />
       <window_info anchor="bottom" id="Find" order="2" />
       <window_info anchor="bottom" id="Run" order="3" />
-      <window_info anchor="bottom" id="Debug" order="4" weight="0.4" />
+      <window_info anchor="bottom" id="Debug" order="4" sideWeight="0.49946696" weight="0.39937758" />
       <window_info anchor="bottom" id="Cvs" order="5" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="6" weight="0.4" />
-      <window_info anchor="bottom" id="Floobits" order="7" weight="0.14522822" />
-      <window_info anchor="bottom" id="TODO" order="8" />
+      <window_info anchor="bottom" id="Floobits" order="7" weight="0.22821577" />
+      <window_info anchor="bottom" id="TODO" order="8" weight="0.32987553" />
       <window_info anchor="bottom" id="Database Changes" order="9" />
       <window_info anchor="bottom" id="Terminal" order="10" weight="0.32987553" />
-      <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
-      <window_info anchor="bottom" id="Version Control" order="12" />
+      <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.50053304" side_tool="true" weight="0.39937758" />
+      <window_info anchor="bottom" id="Version Control" order="12" weight="0.32987553" />
+      <window_info active="true" anchor="bottom" id="Messages" order="13" visible="true" weight="0.1846473" />
+      <window_info anchor="bottom" id="GitLabIntegration" order="14" weight="0.32987553" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -202,6 +342,14 @@
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <ignored-roots>
+      <path value="C:/Program Files/Git/bin/git.exe" />
+    </ignored-roots>
+    <MESSAGE value="First commit files" />
+    <MESSAGE value="Internal commit" />
+    <option name="LAST_COMMIT_MESSAGE" value="Internal commit" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/.floo">
@@ -221,27 +369,99 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/me/kristopher/realcraft/objects/Messages.java">
+    <entry file="file://$PROJECT_DIR$/src/me/kristopher/realcraft/listener/InteractListener.java" />
+    <entry file="file://$PROJECT_DIR$/src/me/kristopher/realcraft/listener/DamageListener.java" />
+    <entry file="jar://$PROJECT_DIR$/../notifier/Paper-1.14.2-b81.jar!/org/bukkit/plugin/Plugin.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="15" column="4" selection-start-line="15" selection-start-column="4" selection-end-line="15" selection-end-column="4" />
+        <state relative-caret-position="90">
+          <caret line="6" column="17" selection-start-line="6" selection-start-column="17" selection-end-line="6" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/me/kristopher/realcraft/objects/WoodworkerConfig.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="13" column="21" selection-start-line="13" selection-start-column="21" selection-end-line="13" selection-end-column="21" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/me/kristopher/realcraft/objects/ConfigManager.java">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/me/kristopher/realcraft/listener/HeightListener.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="5" column="4" selection-start-line="5" selection-start-column="4" selection-end-line="5" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/me/kristopher/realcraft/objects/Player.java">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/me/kristopher/realcraft/listener/AttackListener.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="486">
+          <caret line="35" column="27" selection-start-line="35" selection-start-column="27" selection-end-line="35" selection-end-column="27" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/me/kristopher/realcraft/objects/Recipe.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="504">
+          <caret line="36" column="157" selection-start-line="36" selection-start-column="157" selection-end-line="36" selection-end-column="157" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/me/kristopher/realcraft/Realcraft.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="594">
-          <caret line="45" column="1" selection-start-line="45" selection-start-column="1" selection-end-line="45" selection-end-column="1" />
+        <state relative-caret-position="36">
+          <caret line="12" column="56" selection-start-line="12" selection-start-column="56" selection-end-line="12" selection-end-column="56" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/me/kristopher/realcraft/listener/InventoryListener.java">
-      <provider selected="true" editor-type-id="text-editor" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="36">
+          <caret line="2" selection-start-line="2" selection-end-line="2" />
+        </state>
+      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/me/kristopher/realcraft/listener/BlockListener.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="242">
-          <caret line="60" column="21" lean-forward="true" selection-start-line="60" selection-start-column="21" selection-end-line="60" selection-end-column="21" />
+        <state relative-caret-position="288">
+          <caret line="28" column="44" selection-start-line="28" selection-start-column="44" selection-end-line="28" selection-end-column="44" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/me/kristopher/realcraft/objects/Messages.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="598">
+          <caret line="42" column="28" lean-forward="true" selection-start-line="42" selection-start-column="28" selection-end-line="42" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/me/kristopher/realcraft/listener/PlayerListener.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="432">
+          <caret line="26" column="67" lean-forward="true" selection-start-line="26" selection-start-column="67" selection-end-line="26" selection-end-column="67" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -309,6 +529,7 @@
       </state>
       <state key="ProjectLibrariesConfigurable.UI">
         <settings>
+          <last-edited>spigot-1.14.2</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>

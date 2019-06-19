@@ -1,6 +1,7 @@
 package me.kristopher.realcraft.listener;
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Random;
 import java.util.UUID;
 
 import me.kristopher.realcraft.objects.Messages;
@@ -21,7 +22,6 @@ import org.bukkit.event.block.BlockPlaceEvent;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.meta.Damageable;
 import org.bukkit.inventory.meta.ItemMeta;
-import org.bukkit.material.MaterialData;
 
 public class BlockListener implements Listener {
 
@@ -32,15 +32,23 @@ public class BlockListener implements Listener {
 		this.plugin = plugin;
 		playersCooldown = new HashMap<>();
 	}
-	//Removing wooden blocks only with axes
+	//Removing wooden and stone blocks only with special tool
 	@EventHandler
 	public void blockBreak(BlockBreakEvent e) {
 		Player p = e.getPlayer();
 		Block b = e.getBlock();
 
-		if (b.getType().name().contains("LOG") || b.getType().name().contains("PLANKS")) {
-			if (!p.getInventory().getItemInMainHand().getType().name().contains("AXE") || p.getInventory().getItemInMainHand().getType().name().contains("GOLDEN_AXE") || p.getInventory().getItemInMainHand().getType().name().contains("PICKAXE")) {
+		if (b.getType().name().contains("LOG") || b.getType().name().contains("PLANKS") || b.getType().name().contains("OAK") || b.getType().name().contains("SPRUCE") || b.getType().name().contains("BIRCH") || b.getType().name().contains("JUNGLE") || b.getType().name().contains("ACACIA")) {
+			if (!b.getType().name().contains("LEAVES") && !b.getType().name().contains("SAPLING")) {
+				if (!p.getInventory().getItemInMainHand().getType().name().contains("AXE") || p.getInventory().getItemInMainHand().getType().name().contains("GOLDEN_AXE") || p.getInventory().getItemInMainHand().getType().name().contains("PICKAXE")) {
+					e.setCancelled(true);
 
+					if (canSendMessage(p.getUniqueId()))
+						p.sendMessage(StringUtil.inColor(plugin.getMsgs().getCantBreakBlock()));
+				}
+			}
+		} else if (b.getType().name().contains("STONE") || (b.getType().name().contains("GRANITE")) || b.getType().name().contains("DIORITE") || b.getType().name().contains("ANDESITE") || b.getType().name().contains("ORE") || b.getType().name().contains("ANDESITE") || b.getType().name().contains("QUARTZ")) {
+			if (!p.getInventory().getItemInMainHand().getType().name().contains("PICKAXE")){
 				e.setCancelled(true);
 
 				if (canSendMessage(p.getUniqueId()))
@@ -48,6 +56,22 @@ public class BlockListener implements Listener {
 			}
 		}
 	}
+
+	//New drop for leaves
+	@EventHandler
+	public void replaceDrop(BlockBreakEvent e) {
+		Player p = e.getPlayer();
+		Block b = e.getBlock();
+		Random random = new Random();
+
+		if (b.getType().name().contains("LEAVES")) {
+			double chance = 0.1f;
+			if(random.nextDouble() <= chance) {
+				b.getLocation().getWorld().dropItemNaturally(b.getLocation(), new ItemStack(Material.STICK));
+			}
+		}
+	}
+
 	//Woodworker's hammer realisation
 	@EventHandler
 	public void onBlockPlace(BlockPlaceEvent e) {
@@ -59,55 +83,56 @@ public class BlockListener implements Listener {
 		ItemStack hammer = woodCfg.getItem();
 
 		//We can place wooden blocks only with hammer in left hand
-		if (stackOffHand == null || stackOffHand.getType() == Material.AIR || stackOffHand.getType() != hammer.getType() || !stackOffHand.getItemMeta().getDisplayName().equals(hammer.getItemMeta().getDisplayName()) || !stackOffHand.getItemMeta().getLore().equals(hammer.getItemMeta().getLore())) {
-			if (b.getType().name().contains("LOG") || b.getType().name().contains("PLANKS")) {
-				e.setCancelled(true);
+		if (b.getType().name().contains("LOG") || b.getType().name().contains("PLANKS") || b.getType().name().contains("OAK") || b.getType().name().contains("SPRUCE") || b.getType().name().contains("BIRCH") || b.getType().name().contains("JUNGLE") || b.getType().name().contains("ACACIA")) {
+			if (!b.getType().name().contains("LEAVES") && !b.getType().name().contains("SAPLING")) {
+				if (stackOffHand == null || stackOffHand.getType() == Material.AIR || stackOffHand.getType() != hammer.getType() || !stackOffHand.getItemMeta().getDisplayName().equals(hammer.getItemMeta().getDisplayName()) || !stackOffHand.getItemMeta().getLore().equals(hammer.getItemMeta().getLore())) {
+					e.setCancelled(true);
 
-				if (canSendMessage(p.getUniqueId()))
-					p.sendMessage(StringUtil.inColor(messagesConfig.getCantPlaceWithoutHammer()));
-				return;
+					if (canSendMessage(p.getUniqueId()))
+						p.sendMessage(StringUtil.inColor(messagesConfig.getCantPlaceWithoutHammer()));
+					return;
+				}
+
+				//Removing durability from hammer when placeing blocks
+				net.minecraft.server.v1_14_R1.ItemStack stack = CraftItemStack.asNMSCopy(stackOffHand);
+
+				if (!stack.hasTag() || !stack.getTag().hasKey("durability")) {
+					NBTTagCompound nbt = (stack.hasTag() ? stack.getTag() : new NBTTagCompound());
+					nbt.setInt("durability", 512);  //place 512 blocks before breaking tool
+					stack.setTag(nbt);
+					stackOffHand = CraftItemStack.asCraftMirror(stack);
+				}
+
+				NBTTagCompound nbt = stack.getTag();
+
+				if (nbt.getInt("durability") <= 0) {
+					p.getInventory().setItemInOffHand(null);
+					p.updateInventory();
+					p.playSound(p.getLocation(), Sound.ENTITY_ITEM_BREAK, 1.0F, 1.0F);
+					return;
+				}
+				//Math operation to calculate durability for GOLDEN_AXE
+				//Which have durability only 32
+				int durability = nbt.getInt("durability") - 1;
+				int procentMain = (int) (((double) durability / 512.f * 100.f));
+				int durabilityChange = (int) (((double) 32.f * procentMain / 100.f));
+
+				stack = CraftItemStack.asNMSCopy(stackOffHand);
+				nbt.setInt("durability", durability);
+				stack.setTag(nbt);
+				stackOffHand = CraftItemStack.asBukkitCopy(stack);
+
+				Damageable damageableMeta = (Damageable) stackOffHand.getItemMeta();
+
+				if (damageableMeta == null)
+					return;
+
+				damageableMeta.setDamage(32 - durabilityChange);
+				stackOffHand.setItemMeta((ItemMeta) damageableMeta);
+
+				p.getInventory().setItemInOffHand(stackOffHand);
 			}
-			return;
 		}
-
-		//Removing durability from hammer when placeing blocks
-		net.minecraft.server.v1_14_R1.ItemStack stack = CraftItemStack.asNMSCopy(stackOffHand);
-
-		if (!stack.hasTag() || !stack.getTag().hasKey("durability")) {
-			NBTTagCompound nbt = (stack.hasTag() ? stack.getTag() : new NBTTagCompound());
-			nbt.setInt("durability", 512);  //remove 512 blocks before breaking tool
-			stack.setTag(nbt);
-			stackOffHand = CraftItemStack.asCraftMirror(stack);
-		}
-
-		NBTTagCompound nbt = stack.getTag();
-
-		if (nbt.getInt("durability") <= 0) {
-			p.getInventory().setItemInOffHand(null);
-			p.updateInventory();
-			p.playSound(p.getLocation(), Sound.ENTITY_ITEM_BREAK, 1.0F, 1.0F);
-			return;
-		}
-		//Math operation to calculate durability for GOLDEN_AXE
-		//Which have durability only 32
-		int durability = nbt.getInt("durability") - 1;
-		int procentMain = (int) (((double) durability / 512.f * 100.f));
-		int durabilityChange = (int) (((double) 32.f * procentMain / 100.f));
-
-		stack = CraftItemStack.asNMSCopy(stackOffHand);
-		nbt.setInt("durability", durability);
-		stack.setTag(nbt);
-		stackOffHand = CraftItemStack.asBukkitCopy(stack);
-
-		Damageable damageableMeta = (Damageable) stackOffHand.getItemMeta();
-
-		if (damageableMeta == null)
-			return;
-
-		damageableMeta.setDamage(32 - durabilityChange);
-		stackOffHand.setItemMeta((ItemMeta) damageableMeta);
-
-		p.getInventory().setItemInOffHand(stackOffHand);
 	}
 
 	//Delay before messages
@@ -124,5 +149,4 @@ public class BlockListener implements Listener {
 
 		return false;
 	}
-
 }
