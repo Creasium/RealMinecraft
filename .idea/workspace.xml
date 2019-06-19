@@ -1,23 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="0c55d5df-c56f-49bd-944d-0fe493f17ed9" name="Default Changelist" comment="Internal commit">
-      <change afterPath="$PROJECT_DIR$/src/me/kristopher/realcraft/listener/AttackListener.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/me/kristopher/realcraft/listener/PlayerListener.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RealMinecraft.iml" beforeDir="false" afterPath="$PROJECT_DIR$/RealMinecraft.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/RealMinecraft/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/RealMinecraft/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/RealMinecraft/META-INF/RealMinecraft.kotlin_module" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/RealMinecraft/META-INF/RealMinecraft.kotlin_module" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/RealMinecraft/RealMinecraft.iml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/RealMinecraft/RealMinecraft.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/RealMinecraft/me/kristopher/realcraft/Realcraft.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/RealMinecraft/me/kristopher/realcraft/Realcraft.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/RealMinecraft/me/kristopher/realcraft/listener/BlockListener.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/RealMinecraft/me/kristopher/realcraft/listener/BlockListener.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/RealMinecraft/me/kristopher/realcraft/objects/Messages.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/RealMinecraft/me/kristopher/realcraft/objects/Messages.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/RealMinecraft/me/kristopher/realcraft/objects/Recipe.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/RealMinecraft/me/kristopher/realcraft/objects/Recipe.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/me/kristopher/realcraft/Realcraft.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/me/kristopher/realcraft/Realcraft.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/me/kristopher/realcraft/listener/BlockListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/me/kristopher/realcraft/listener/BlockListener.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/me/kristopher/realcraft/objects/Messages.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/me/kristopher/realcraft/objects/Messages.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/me/kristopher/realcraft/objects/Recipe.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/me/kristopher/realcraft/objects/Recipe.java" afterDir="false" />
-    </list>
+    <list default="true" id="0c55d5df-c56f-49bd-944d-0fe493f17ed9" name="Default Changelist" comment="" />
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -45,8 +29,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/me/kristopher/realcraft/listener/PlayerListener.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="270">
-              <caret line="36" column="12" lean-forward="true" selection-start-line="36" selection-start-column="12" selection-end-line="36" selection-end-column="12" />
+            <state relative-caret-position="306">
+              <caret line="38" column="9" lean-forward="true" selection-start-line="38" selection-start-column="9" selection-end-line="38" selection-end-column="9" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -162,8 +146,7 @@
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="384" />
-    <option name="y" value="-8" />
+    <option name="x" value="-8" />
     <option name="width" value="1225" />
     <option name="height" value="1080" />
   </component>
@@ -276,7 +259,7 @@
       <workItem from="1560860708602" duration="1674000" />
       <workItem from="1560862475262" duration="5421000" />
       <workItem from="1560869580815" duration="156000" />
-      <workItem from="1560924299076" duration="17725000" />
+      <workItem from="1560924299076" duration="18035000" />
     </task>
     <task id="LOCAL-00001" summary="First commit files">
       <created>1560861967231</created>
@@ -285,11 +268,18 @@
       <option name="project" value="LOCAL" />
       <updated>1560861967231</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Internal commit">
+      <created>1560946483784</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1560946483784</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="42895000" />
+    <option name="totallyTimeSpent" value="43205000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -302,9 +292,8 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1096" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.4991119" visible="true" weight="0.19349681" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4991119" visible="true" weight="0.19349681" />
       <window_info id="Structure" order="1" sideWeight="0.5008881" side_tool="true" weight="0.18017058" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -322,9 +311,9 @@
       <window_info anchor="bottom" id="TODO" order="8" weight="0.32987553" />
       <window_info anchor="bottom" id="Database Changes" order="9" />
       <window_info anchor="bottom" id="Terminal" order="10" weight="0.32987553" />
-      <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.50053304" side_tool="true" weight="0.39937758" />
-      <window_info anchor="bottom" id="Version Control" order="12" weight="0.32987553" />
-      <window_info anchor="bottom" id="Messages" order="13" visible="true" weight="0.1846473" />
+      <window_info active="true" anchor="bottom" id="Event Log" order="11" sideWeight="0.50053304" side_tool="true" visible="true" weight="0.32987553" />
+      <window_info anchor="bottom" id="Version Control" order="12" sideWeight="0.49946696" visible="true" weight="0.32987553" />
+      <window_info anchor="bottom" id="Messages" order="13" sideWeight="0.49946696" weight="0.1846473" />
       <window_info anchor="bottom" id="GitLabIntegration" order="14" weight="0.32987553" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -339,6 +328,32 @@
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="RECENTLY_FILTERED_USER_GROUPS">
+                <collection />
+              </option>
+              <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
+                <collection />
+              </option>
+              <option name="COLUMN_ORDER">
+                <list>
+                  <option value="0" />
+                  <option value="1" />
+                  <option value="2" />
+                  <option value="3" />
+                </list>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="VcsManagerConfiguration">
     <ignored-roots>
@@ -451,8 +466,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/me/kristopher/realcraft/listener/PlayerListener.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="36" column="12" lean-forward="true" selection-start-line="36" selection-start-column="12" selection-end-line="36" selection-end-column="12" />
+        <state relative-caret-position="306">
+          <caret line="38" column="9" lean-forward="true" selection-start-line="38" selection-start-column="9" selection-end-line="38" selection-end-column="9" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
