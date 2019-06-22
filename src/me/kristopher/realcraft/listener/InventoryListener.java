@@ -1,5 +1,6 @@
 package me.kristopher.realcraft.listener;
 
+import me.kristopher.realcraft.objects.ThickStickConfig;
 import org.bukkit.Material;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
@@ -32,10 +33,17 @@ public class InventoryListener implements Listener{
                 return;
         }
         WoodworkerConfig woodCfg = plugin.getWoodCfg();
-        if (matrix[0].getType() == Material.FLINT && matrix[1].getType() == Material.FLINT 
+        ThickStickConfig stickCfg = plugin.getStickCfg();
+        if (matrix[0].getType() == Material.FLINT && matrix[1].getType() == Material.FLINT
                 && matrix[2].getType() == Material.STICK && matrix[3].getType() == Material.FLINT) {
         	ItemStack stack = woodCfg.getItem();
             craftingInventory.setResult(stack);
         }
+
+		if (matrix[0].getType() == Material.STICK && matrix[1].getType() == Material.STICK
+				&& matrix[2].getType() == Material.STICK && matrix[3].getType() == Material.STICK) {
+			ItemStack stack = stickCfg.getItem();
+			craftingInventory.setResult(stack);
+		}
 	}
 }

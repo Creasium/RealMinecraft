@@ -5,6 +5,7 @@ import java.util.Random;
 import java.util.UUID;
 
 import me.kristopher.realcraft.objects.Messages;
+import me.kristopher.realcraft.objects.ThickStickConfig;
 import me.kristopher.realcraft.objects.WoodworkerConfig;
 import net.minecraft.server.v1_14_R1.NBTTagCompound;
 import org.bukkit.Material;
@@ -37,14 +38,22 @@ public class BlockListener implements Listener {
 	public void blockBreak(BlockBreakEvent e) {
 		Player p = e.getPlayer();
 		Block b = e.getBlock();
+		Random random = new Random();
 
+		ThickStickConfig stickCfg = plugin.getStickCfg();
+		ItemStack stackInHand = p.getInventory().getItemInMainHand();
+		ItemStack thickstick = stickCfg.getItem();
+
+		//Checking item in hand when you are breaking wooden blocks
 		if (b.getType().name().contains("LOG") || b.getType().name().contains("PLANKS") || b.getType().name().contains("OAK") || b.getType().name().contains("SPRUCE") || b.getType().name().contains("BIRCH") || b.getType().name().contains("JUNGLE") || b.getType().name().contains("ACACIA")) {
 			if (!b.getType().name().contains("LEAVES") && !b.getType().name().contains("SAPLING")) {
-				if (!p.getInventory().getItemInMainHand().getType().name().contains("AXE") || p.getInventory().getItemInMainHand().getType().name().contains("GOLDEN_AXE") || p.getInventory().getItemInMainHand().getType().name().contains("PICKAXE")) {
-					e.setCancelled(true);
+				if (!stackInHand.getItemMeta().getDisplayName().equals(thickstick.getItemMeta().getDisplayName()) || !stackInHand.getItemMeta().getLore().equals(thickstick.getItemMeta().getLore())) {
+					if (!p.getInventory().getItemInMainHand().getType().name().contains("AXE") || p.getInventory().getItemInMainHand().getType().name().contains("GOLDEN_AXE") || p.getInventory().getItemInMainHand().getType().name().contains("PICKAXE")) {
+						e.setCancelled(true);
 
-					if (canSendMessage(p.getUniqueId()))
-						p.sendMessage(StringUtil.inColor(plugin.getMsgs().getCantBreakBlock()));
+						if (canSendMessage(p.getUniqueId()))
+							p.sendMessage(StringUtil.inColor(plugin.getMsgs().getCantBreakBlock()));
+					}
 				}
 			}
 		} else if (b.getType().name().contains("STONE") || (b.getType().name().contains("GRANITE")) || b.getType().name().contains("DIORITE") || b.getType().name().contains("ANDESITE") || b.getType().name().contains("ORE") || b.getType().name().contains("ANDESITE") || b.getType().name().contains("QUARTZ")) {
@@ -55,19 +64,23 @@ public class BlockListener implements Listener {
 					p.sendMessage(StringUtil.inColor(plugin.getMsgs().getCantBreakBlock()));
 			}
 		}
-	}
 
-	//New drop for leaves
-	@EventHandler
-	public void replaceDrop(BlockBreakEvent e) {
-		Player p = e.getPlayer();
-		Block b = e.getBlock();
-		Random random = new Random();
-
+		//New drop for leaves
 		if (b.getType().name().contains("LEAVES")) {
 			double chance = 0.1f;
 			if(random.nextDouble() <= chance) {
 				b.getLocation().getWorld().dropItemNaturally(b.getLocation(), new ItemStack(Material.STICK));
+			}
+		}
+
+		//Chance of breaking think stick (25%) (0.25f)
+		if (stackInHand.getItemMeta().getDisplayName().equals(thickstick.getItemMeta().getDisplayName()) || stackInHand.getItemMeta().getLore().equals(thickstick.getItemMeta().getLore())) {
+			double chance = 0.25f;
+			if(random.nextDouble() <= chance) {
+				stackInHand.setAmount(stackInHand.getAmount()-1);
+				p.updateInventory();
+				p.playSound(p.getLocation(), Sound.ENTITY_ZOMBIE_BREAK_WOODEN_DOOR, 1.0F, 1.0F);
+				return;
 			}
 		}
 	}

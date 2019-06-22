@@ -1,5 +1,6 @@
 package me.kristopher.realcraft;
 
+import me.kristopher.realcraft.objects.ThickStickConfig;
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
 import org.bukkit.plugin.java.JavaPlugin;
@@ -16,11 +17,13 @@ public class Realcraft extends JavaPlugin{
 
 	private Messages msgs;
 	private WoodworkerConfig woodCfg;
+	private ThickStickConfig stickCfg;
 	
 	@Override
 	public void onEnable() {
 		msgs = new Messages(this);
 		woodCfg = new WoodworkerConfig(this);
+		stickCfg = new ThickStickConfig(this);
 		Recipe recipe = new Recipe(this);
 		recipe.registerRecipes();
 		Bukkit.getPluginManager().registerEvents(new AttackListener(this), this);
@@ -46,5 +49,8 @@ public class Realcraft extends JavaPlugin{
 	}
 	public WoodworkerConfig getWoodCfg() {
 		return woodCfg;
+	}
+	public ThickStickConfig getStickCfg() {
+		return stickCfg;
 	}
 }
