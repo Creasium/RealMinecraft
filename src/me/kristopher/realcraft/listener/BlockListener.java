@@ -65,7 +65,7 @@ public class BlockListener implements Listener {
 			}
 		}
 
-		//New drop for leaves
+		//New drop for leaves (10%) (0.1f)
 		if (b.getType().name().contains("LEAVES")) {
 			double chance = 0.1f;
 			if(random.nextDouble() <= chance) {
