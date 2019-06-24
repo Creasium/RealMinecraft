@@ -71,7 +71,7 @@ public class BlockListener implements Listener {
 			}
 		}
 
-		//New drop for sand
+		//New drop for sand (3% chance)
 		if (b.getType().name().equals("SAND")) {
 			double chance = 0.03f;
 			if(random.nextDouble() <= chance) {
