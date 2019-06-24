@@ -8,6 +8,7 @@ import me.kristopher.realcraft.objects.Messages;
 import me.kristopher.realcraft.objects.ThickStickConfig;
 import me.kristopher.realcraft.objects.WoodworkerConfig;
 import net.minecraft.server.v1_14_R1.NBTTagCompound;
+import org.bukkit.ChatColor;
 import org.bukkit.Material;
 import org.bukkit.Sound;
 import org.bukkit.block.Block;
@@ -44,15 +45,18 @@ public class BlockListener implements Listener {
 		ItemStack stackInHand = p.getInventory().getItemInMainHand();
 		ItemStack thickstick = stickCfg.getItem();
 
+		System.out.println(stackInHand.isSimilar(stickCfg.getItem()));
 		//Checking item in hand when you are breaking wooden blocks
 		if (b.getType().name().contains("LOG") || b.getType().name().contains("PLANKS") || b.getType().name().contains("OAK") || b.getType().name().contains("SPRUCE") || b.getType().name().contains("BIRCH") || b.getType().name().contains("JUNGLE") || b.getType().name().contains("ACACIA")) {
 			if (!b.getType().name().contains("LEAVES") && !b.getType().name().contains("SAPLING")) {
-					if (!p.getInventory().getItemInMainHand().getType().name().contains("AXE") || p.getInventory().getItemInMainHand().getType().name().contains("GOLDEN_AXE") || p.getInventory().getItemInMainHand().getType().name().contains("PICKAXE") || !stackInHand.getItemMeta().getDisplayName().equals(thickstick.getItemMeta().getDisplayName())) {
-							e.setCancelled(true);
+				if (stackInHand.getType() == null || !stackInHand.getType().name().contains("AXE") || stackInHand.getType().name().contains("GOLDEN_AXE") || stackInHand.getType().name().contains("PICKAXE")) {
+					if (!stackInHand.isSimilar(stickCfg.getItem())) {
+						e.setCancelled(true);
 
-							if (canSendMessage(p.getUniqueId()))
-								p.sendMessage(StringUtil.inColor(plugin.getMsgs().getCantBreakBlock()));
+						if (canSendMessage(p.getUniqueId()))
+							p.sendMessage(StringUtil.inColor(plugin.getMsgs().getCantBreakBlock()));
 					}
+				}
 			}
 		} else if (b.getType().name().contains("STONE") || (b.getType().name().contains("GRANITE")) || b.getType().name().contains("DIORITE") || b.getType().name().contains("ANDESITE") || b.getType().name().contains("ORE") || b.getType().name().contains("ANDESITE") || b.getType().name().contains("QUARTZ")) {
 			if (!p.getInventory().getItemInMainHand().getType().name().contains("PICKAXE")){
@@ -71,9 +75,9 @@ public class BlockListener implements Listener {
 			}
 		}
 
-		//New drop for sand (3% chance)
+		//New drop for sand (10% chance)
 		if (b.getType().name().equals("SAND")) {
-			double chance = 0.03f;
+			double chance = 0.1f;
 			if(random.nextDouble() <= chance) {
 				b.getLocation().getWorld().dropItemNaturally(b.getLocation(), new ItemStack(Material.FLINT));
 			}
@@ -87,7 +91,6 @@ public class BlockListener implements Listener {
 					stackInHand.setAmount(stackInHand.getAmount() - 1);
 					p.updateInventory();
 					p.playSound(p.getLocation(), Sound.ENTITY_ZOMBIE_BREAK_WOODEN_DOOR, 1.0F, 1.0F);
-					return;
 				}
 			}
 		}

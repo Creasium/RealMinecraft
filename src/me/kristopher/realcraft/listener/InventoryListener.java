@@ -32,16 +32,21 @@ public class InventoryListener implements Listener{
             if (stack == null || stack.getType() == Material.AIR)
                 return;
         }
-        WoodworkerConfig woodCfg = plugin.getWoodCfg();
-        ThickStickConfig stickCfg = plugin.getStickCfg();
-        if (matrix[0].getType() == Material.FLINT && matrix[1].getType() == Material.FLINT
-                && matrix[2].getType() == Material.STICK && matrix[3].getType() == Material.FLINT) {
-	        e.getInventory().setResult(woodCfg.getItem());
-        }
+//        WoodworkerConfig woodCfg = plugin.getWoodCfg();
+//        ThickStickConfig stickCfg = plugin.getStickCfg();
+//        if (matrix[0].getType() == Material.FLINT && matrix[1].getType() == Material.FLINT
+//                && matrix[2].getType() == Material.STICK && matrix[3].getType() == Material.FLINT) {
+//	        e.getInventory().setResult(woodCfg.getItem());
+//	        for (int i = 0; i <= 4; i++) {
+//				if (matrix[i].getAmount() > 1){
+//					matrix[i].setAmount(matrix[i].getAmount()-1);
+//				}
+//	        }
+//        }
 
-		if (matrix[0].getType() == Material.STICK && matrix[1].getType() == Material.STICK
-				&& matrix[2].getType() == Material.STICK && matrix[3].getType() == Material.STICK) {
-			//e.getInventory().setResult(stickCfg.getItem());
-		}
+//		if (matrix[0].getType() == Material.STICK && matrix[1].getType() == Material.STICK
+//				&& matrix[2].getType() == Material.STICK && matrix[3].getType() == Material.STICK) {
+//			e.getInventory().setResult(stickCfg.getItem());
+//		}
 	}
 }
