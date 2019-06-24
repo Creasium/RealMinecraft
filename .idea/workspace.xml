@@ -2,12 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0c55d5df-c56f-49bd-944d-0fe493f17ed9" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/RealMinecraft/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/RealMinecraft/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/RealMinecraft/me/kristopher/realcraft/listener/BlockListener.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/RealMinecraft/me/kristopher/realcraft/listener/BlockListener.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/me/kristopher/realcraft/listener/BlockListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/me/kristopher/realcraft/listener/BlockListener.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/me/kristopher/realcraft/listener/InventoryListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/me/kristopher/realcraft/listener/InventoryListener.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/me/kristopher/realcraft/objects/Recipe.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/me/kristopher/realcraft/objects/Recipe.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/RealMinecraft/me/kristopher/realcraft/listener/InventoryListener.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/RealMinecraft/me/kristopher/realcraft/listener/InventoryListener.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/RealMinecraft/me/kristopher/realcraft/objects/Recipe.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/RealMinecraft/me/kristopher/realcraft/objects/Recipe.class" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -39,8 +35,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/me/kristopher/realcraft/listener/PlayerListener.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="108">
-              <caret line="17" column="39" selection-start-line="17" selection-start-column="39" selection-end-line="17" selection-end-column="39" />
+            <state relative-caret-position="198">
+              <caret line="22" column="5" lean-forward="true" selection-start-line="22" selection-start-column="5" selection-end-line="22" selection-end-column="5" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -165,8 +161,8 @@
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="366" />
-    <option name="y" value="1" />
+    <option name="x" value="124" />
+    <option name="y" value="-20" />
     <option name="width" value="1225" />
     <option name="height" value="1080" />
   </component>
@@ -270,7 +266,7 @@
       <workItem from="1561136861902" duration="11677000" />
       <workItem from="1561297554592" duration="7337000" />
       <workItem from="1561351899815" duration="930000" />
-      <workItem from="1561358223206" duration="11193000" />
+      <workItem from="1561358223206" duration="11505000" />
     </task>
     <task id="LOCAL-00001" summary="First commit files">
       <created>1560861967231</created>
@@ -314,11 +310,18 @@
       <option name="project" value="LOCAL" />
       <updated>1561166823602</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Commit Message&#10;There is a lot of bugs...">
+      <created>1561371788329</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1561371788329</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="83374000" />
+    <option name="totallyTimeSpent" value="83686000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -331,9 +334,8 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1096" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4991119" visible="true" weight="0.20415778" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.4991119" visible="true" weight="0.20415778" />
       <window_info id="Structure" order="1" sideWeight="0.5008881" side_tool="true" weight="0.18017058" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -353,7 +355,7 @@
       <window_info anchor="bottom" id="Terminal" order="10" weight="0.32987553" />
       <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.50159913" side_tool="true" weight="0.32987553" />
       <window_info anchor="bottom" id="Version Control" order="12" sideWeight="0.49840087" weight="0.32987553" />
-      <window_info active="true" anchor="bottom" id="Messages" order="13" sideWeight="0.49946696" visible="true" weight="0.13278009" />
+      <window_info anchor="bottom" id="Messages" order="13" sideWeight="0.49946696" visible="true" weight="0.13278009" />
       <window_info anchor="bottom" id="GitLabIntegration" order="14" weight="0.32987553" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -416,7 +418,8 @@
     <MESSAGE value="First commit files" />
     <MESSAGE value="+When you trying to break wooden block without axe or stone without pickaxe, server will send a message to you “You can’t break this block without &lt;tool&gt;”. Every message will be in &quot;message.yml&quot; file. (Kris and Oleg)&#10;+Can’t kill any mobs (besides Chicken) without sword. (Kris)&#10;+To build anything from planks or wood you will need a woodworker's hammer. It must be kept in your left hand and only then it will be possible to build. The hammer can break. (Kris and Oleg)&#10;+Sticks will drops from leaves (10% chance). With sticks you can make your first tool. (Kris)&#10;+Rotten flesh can be roasted in the oven and get food that will not impose the effect of hunger. (Kris)&#10;+Each mob will drop leather. (Kris)&#10;+If a player climbs to a height of more than 200 blocks, then he will start suffocating. (Kris)&#10;+Add thick stick (4 sticks in crafting table). Thick stick can break with 25% chance. (Kris)" />
     <MESSAGE value="Internal commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="Internal commit" />
+    <MESSAGE value="Commit Message&#10;There is a lot of bugs..." />
+    <option name="LAST_COMMIT_MESSAGE" value="Commit Message&#10;There is a lot of bugs..." />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/.floo">
@@ -535,8 +538,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/me/kristopher/realcraft/listener/PlayerListener.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="108">
-          <caret line="17" column="39" selection-start-line="17" selection-start-column="39" selection-end-line="17" selection-end-column="39" />
+        <state relative-caret-position="198">
+          <caret line="22" column="5" lean-forward="true" selection-start-line="22" selection-start-column="5" selection-end-line="22" selection-end-column="5" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
