@@ -47,14 +47,12 @@ public class BlockListener implements Listener {
 		//Checking item in hand when you are breaking wooden blocks
 		if (b.getType().name().contains("LOG") || b.getType().name().contains("PLANKS") || b.getType().name().contains("OAK") || b.getType().name().contains("SPRUCE") || b.getType().name().contains("BIRCH") || b.getType().name().contains("JUNGLE") || b.getType().name().contains("ACACIA")) {
 			if (!b.getType().name().contains("LEAVES") && !b.getType().name().contains("SAPLING")) {
-				if (!stackInHand.getItemMeta().getDisplayName().equals(thickstick.getItemMeta().getDisplayName()) || !stackInHand.getItemMeta().getLore().equals(thickstick.getItemMeta().getLore())) {
-					if (!p.getInventory().getItemInMainHand().getType().name().contains("AXE") || p.getInventory().getItemInMainHand().getType().name().contains("GOLDEN_AXE") || p.getInventory().getItemInMainHand().getType().name().contains("PICKAXE")) {
-						e.setCancelled(true);
+					if (!p.getInventory().getItemInMainHand().getType().name().contains("AXE") || p.getInventory().getItemInMainHand().getType().name().contains("GOLDEN_AXE") || p.getInventory().getItemInMainHand().getType().name().contains("PICKAXE") || !stackInHand.getItemMeta().getDisplayName().equals(thickstick.getItemMeta().getDisplayName())) {
+							e.setCancelled(true);
 
-						if (canSendMessage(p.getUniqueId()))
-							p.sendMessage(StringUtil.inColor(plugin.getMsgs().getCantBreakBlock()));
+							if (canSendMessage(p.getUniqueId()))
+								p.sendMessage(StringUtil.inColor(plugin.getMsgs().getCantBreakBlock()));
 					}
-				}
 			}
 		} else if (b.getType().name().contains("STONE") || (b.getType().name().contains("GRANITE")) || b.getType().name().contains("DIORITE") || b.getType().name().contains("ANDESITE") || b.getType().name().contains("ORE") || b.getType().name().contains("ANDESITE") || b.getType().name().contains("QUARTZ")) {
 			if (!p.getInventory().getItemInMainHand().getType().name().contains("PICKAXE")){
@@ -73,14 +71,24 @@ public class BlockListener implements Listener {
 			}
 		}
 
-		//Chance of breaking think stick (25%) (0.25f)
-		if (stackInHand.getItemMeta().getDisplayName().equals(thickstick.getItemMeta().getDisplayName()) || stackInHand.getItemMeta().getLore().equals(thickstick.getItemMeta().getLore())) {
-			double chance = 0.25f;
+		//New drop for sand
+		if (b.getType().name().equals("SAND")) {
+			double chance = 0.03f;
 			if(random.nextDouble() <= chance) {
-				stackInHand.setAmount(stackInHand.getAmount()-1);
-				p.updateInventory();
-				p.playSound(p.getLocation(), Sound.ENTITY_ZOMBIE_BREAK_WOODEN_DOOR, 1.0F, 1.0F);
-				return;
+				b.getLocation().getWorld().dropItemNaturally(b.getLocation(), new ItemStack(Material.FLINT));
+			}
+		}
+
+		//Chance of breaking thick stick (25%) (0.25f)
+		if (stackInHand != null && stackInHand.hasItemMeta() && stackInHand.getItemMeta().hasDisplayName() && stackInHand.getItemMeta().hasLore()) {
+			if (stackInHand.getItemMeta().getDisplayName().equals(thickstick.getItemMeta().getDisplayName()) || stackInHand.getItemMeta().getLore().equals(thickstick.getItemMeta().getLore())) {
+				double chance = 0.25f;
+				if(random.nextDouble() <= chance) {
+					stackInHand.setAmount(stackInHand.getAmount() - 1);
+					p.updateInventory();
+					p.playSound(p.getLocation(), Sound.ENTITY_ZOMBIE_BREAK_WOODEN_DOOR, 1.0F, 1.0F);
+					return;
+				}
 			}
 		}
 	}

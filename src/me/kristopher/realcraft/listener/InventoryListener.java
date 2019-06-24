@@ -36,14 +36,12 @@ public class InventoryListener implements Listener{
         ThickStickConfig stickCfg = plugin.getStickCfg();
         if (matrix[0].getType() == Material.FLINT && matrix[1].getType() == Material.FLINT
                 && matrix[2].getType() == Material.STICK && matrix[3].getType() == Material.FLINT) {
-        	ItemStack stack = woodCfg.getItem();
-            craftingInventory.setResult(stack);
+	        e.getInventory().setResult(woodCfg.getItem());
         }
 
 		if (matrix[0].getType() == Material.STICK && matrix[1].getType() == Material.STICK
 				&& matrix[2].getType() == Material.STICK && matrix[3].getType() == Material.STICK) {
-			ItemStack stack = stickCfg.getItem();
-			craftingInventory.setResult(stack);
+			//e.getInventory().setResult(stickCfg.getItem());
 		}
 	}
 }

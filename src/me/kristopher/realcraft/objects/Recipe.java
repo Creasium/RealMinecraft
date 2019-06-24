@@ -5,6 +5,7 @@ import org.bukkit.NamespacedKey;
 import org.bukkit.inventory.FurnaceRecipe;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.ShapedRecipe;
+import org.bukkit.inventory.ShapelessRecipe;
 
 import me.kristopher.realcraft.Realcraft;
 
@@ -27,6 +28,8 @@ public class Recipe{
 		ShapedRecipe thicksticktwoRecipe = new ShapedRecipe(new NamespacedKey(plugin, "thicksticktwo"), plugin.getStickCfg().getItem());
 		ShapedRecipe thickstickthreeRecipe = new ShapedRecipe(new NamespacedKey(plugin, "thickstickthree"), plugin.getStickCfg().getItem());
 
+		ShapelessRecipe thickstickshapeless = new ShapelessRecipe(new NamespacedKey(plugin, "thickstickshapeless"), plugin.getStickCfg().getItem());
+
 		woodworkerZeroRecipe.shape("   ", "## ", "*# ");
 		woodworkerOneRecipe.shape("## ", "*# ", "   ");
 		woodworkerTwoRecipe.shape(" ##", " *#", "   ");
@@ -36,6 +39,8 @@ public class Recipe{
 		thickstickoneRecipe.shape(" **", " **", "   ");
 		thicksticktwoRecipe.shape("   ", " **", " **");
 		thickstickthreeRecipe.shape("   ", "** ", "** ");
+
+		thickstickshapeless.addIngredient(4, Material.STICK);
 
 		woodworkerZeroRecipe.setIngredient('#', Material.FLINT);
 		woodworkerZeroRecipe.setIngredient('*', Material.STICK);
@@ -51,6 +56,7 @@ public class Recipe{
 		thicksticktwoRecipe.setIngredient('*', Material.STICK);
 		thickstickthreeRecipe.setIngredient('*', Material.STICK);
 
+		plugin.getServer().addRecipe(thickstickshapeless);
 		plugin.getServer().addRecipe(woodworkerZeroRecipe);
 		plugin.getServer().addRecipe(woodworkerOneRecipe);
 		plugin.getServer().addRecipe(woodworkerTwoRecipe);
