@@ -1,22 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="0c55d5df-c56f-49bd-944d-0fe493f17ed9" name="Default Changelist" comment="40% of plugin done">
-      <change afterPath="$PROJECT_DIR$/src/me/kristopher/realcraft/BukkitRun/BukkitTicks.java" afterDir="false" />
+    <list default="true" id="0c55d5df-c56f-49bd-944d-0fe493f17ed9" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/RealMinecraft/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/RealMinecraft/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/RealMinecraft/me/kristopher/realcraft/Realcraft.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/RealMinecraft/me/kristopher/realcraft/Realcraft.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/RealMinecraft/me/kristopher/realcraft/listener/BlockListener.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/RealMinecraft/me/kristopher/realcraft/listener/BlockListener.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/RealMinecraft/me/kristopher/realcraft/listener/InventoryListener.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/RealMinecraft/me/kristopher/realcraft/listener/InventoryListener.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/RealMinecraft/me/kristopher/realcraft/listener/PlayerListener.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/RealMinecraft/oljek/webinarformalobesh/WebinarForMalobesh.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/RealMinecraft/oljek/webinarformalobesh/object/Operation.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/me/kristopher/realcraft/Realcraft.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/me/kristopher/realcraft/Realcraft.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/me/kristopher/realcraft/listener/BlockListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/me/kristopher/realcraft/listener/BlockListener.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/me/kristopher/realcraft/listener/InventoryListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/me/kristopher/realcraft/listener/InventoryListener.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/me/kristopher/realcraft/listener/PlayerListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/me/kristopher/realcraft/listener/PlayerListener.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/webinarformalobesh/WebinarForMalobesh.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webinarformalobesh/object/Operation.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/me/kristopher/realcraft/BukkitRun/BukkitTicks.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/me/kristopher/realcraft/BukkitRun/BukkitTicks.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -48,8 +36,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/me/kristopher/realcraft/BukkitRun/BukkitTicks.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="503">
-              <caret line="42" column="17" lean-forward="true" selection-start-line="42" selection-start-column="17" selection-end-line="42" selection-end-column="17" />
+            <state relative-caret-position="-469">
+              <caret line="56" column="17" lean-forward="true" selection-start-line="56" selection-start-column="17" selection-end-line="56" selection-end-column="17" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -312,7 +300,7 @@
       <workItem from="1561351899815" duration="930000" />
       <workItem from="1561358223206" duration="11719000" />
       <workItem from="1561372487380" duration="11942000" />
-      <workItem from="1561397575810" duration="7194000" />
+      <workItem from="1561397575810" duration="19120000" />
     </task>
     <task id="LOCAL-00001" summary="First commit files">
       <created>1560861967231</created>
@@ -377,11 +365,18 @@
       <option name="project" value="LOCAL" />
       <updated>1561372255873</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="BukkitRunnable new things">
+      <created>1561407236184</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1561407236184</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="103036000" />
+    <option name="totallyTimeSpent" value="114962000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -394,7 +389,6 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1096" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.4991119" visible="true" weight="0.21002132" />
       <window_info id="Structure" order="1" sideWeight="0.5008881" side_tool="true" weight="0.18017058" />
@@ -481,7 +475,8 @@
     <MESSAGE value="Internal commit" />
     <MESSAGE value="Commit Message&#10;There is a lot of bugs..." />
     <MESSAGE value="40% of plugin done" />
-    <option name="LAST_COMMIT_MESSAGE" value="40% of plugin done" />
+    <MESSAGE value="BukkitRunnable new things" />
+    <option name="LAST_COMMIT_MESSAGE" value="BukkitRunnable new things" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/.floo">
@@ -639,8 +634,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/me/kristopher/realcraft/BukkitRun/BukkitTicks.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="503">
-          <caret line="42" column="17" lean-forward="true" selection-start-line="42" selection-start-column="17" selection-end-line="42" selection-end-column="17" />
+        <state relative-caret-position="-469">
+          <caret line="56" column="17" lean-forward="true" selection-start-line="56" selection-start-column="17" selection-end-line="56" selection-end-column="17" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
