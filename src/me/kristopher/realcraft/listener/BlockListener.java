@@ -8,7 +8,6 @@ import me.kristopher.realcraft.objects.Messages;
 import me.kristopher.realcraft.objects.ThickStickConfig;
 import me.kristopher.realcraft.objects.WoodworkerConfig;
 import net.minecraft.server.v1_14_R1.NBTTagCompound;
-import org.bukkit.ChatColor;
 import org.bukkit.Material;
 import org.bukkit.Sound;
 import org.bukkit.block.Block;

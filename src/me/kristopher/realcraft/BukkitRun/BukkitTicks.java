@@ -1,24 +1,19 @@
 package me.kristopher.realcraft.BukkitRun;
 
-import me.kristopher.realcraft.Realcraft;
-import me.kristopher.realcraft.util.StringUtil;
-import org.bukkit.Bukkit;
-import org.bukkit.Location;
-import org.bukkit.Material;
-import org.bukkit.World;
-import org.bukkit.block.Block;
-import org.bukkit.entity.Player;
-import org.bukkit.event.EventHandler;
-import org.bukkit.inventory.ItemStack;
-import org.bukkit.potion.PotionEffect;
-import org.bukkit.potion.PotionEffectType;
-import org.bukkit.scheduler.BukkitRunnable;
-
 import java.util.HashMap;
 import java.util.Map;
 import java.util.UUID;
 
-public class BukkitTicks extends BukkitRunnable {
+import me.kristopher.realcraft.Realcraft;
+import me.kristopher.realcraft.util.StringUtil;
+import me.kristopher.realcraft.objects.Messages;
+import org.bukkit.*;
+import org.bukkit.potion.PotionEffect;
+import org.bukkit.potion.PotionEffectType;
+import org.bukkit.scheduler.BukkitRunnable;
+import org.bukkit.entity.Player;
+
+public class BukkitTicks extends BukkitRunnable{
 
 	private Realcraft plugin;
 	private static Map<UUID, Long> playersCooldown;
@@ -49,16 +44,17 @@ public class BukkitTicks extends BukkitRunnable {
 			} else if (p.getWorld().getTime() >= 13000 && day) {
 				day = false;
 			}
-
 			//If player more than 200 blocks up - he we start suffocating
 			if (p.getLocation().getBlockY() >= 200) {
 				if (!p.hasPotionEffect(PotionEffectType.WATER_BREATHING)) {
-					p.addPotionEffect(new PotionEffect(PotionEffectType.POISON, 1000, 1));
-					p.addPotionEffect(new PotionEffect(PotionEffectType.CONFUSION, 1000, 1));
-					if (canSendMessage(p.getUniqueId()))
-						p.sendMessage(StringUtil.inColor(plugin.getMsgs().getTooHigh()));
+					p.addPotionEffect(new PotionEffect(PotionEffectType.POISON, 8000, 0, false, false, false));
+					p.addPotionEffect(new PotionEffect(PotionEffectType.CONFUSION, 8000, 1, false, false, false));
+					if (canSendMessage(p.getUniqueId())){
+						p.sendMessage(StringUtil.inColor("&cYou are too high. You need breathing effect."));
+						//p.sendMessage(StringUtil.inColor(plugin.getMsgs().getTooHigh()));
+					}
 				}
-			} else if (p.getLocation().getBlockY() <= 200) { //But if lower than 200 all effects will disappear
+			} else if (p.getLocation().getBlockY() <= 200 || p.hasPotionEffect(PotionEffectType.POISON) || p.hasPotionEffect(PotionEffectType.CONFUSION)) { //But if lower than 200 all effects will disappear
 				p.removePotionEffect(PotionEffectType.POISON);
 				p.removePotionEffect(PotionEffectType.CONFUSION);
 			}
@@ -89,10 +85,10 @@ public class BukkitTicks extends BukkitRunnable {
 					for (int x = -(lowradius); x <= lowradius; x++) {
 						for (int y = -(lowradius); y <= lowradius; y++) {
 							for (int z = -(lowradius); z <= lowradius; z++) {
-								if (loc.getBlock().getRelative(x, y, z).getType() == Material.TORCH && (x != 0 || y != 0 || z != 0)) {
+								if (loc.getBlock().getRelative(x, y, z).getType() == Material.TORCH) {
 									p.sendMessage("3 Material.TORCH");
 									return;
-								} else if (loc.getBlock().getRelative(x, y, z).getType() == Material.LANTERN && (x != 0 || y != 0 || z != 0)) {
+								} else if (loc.getBlock().getRelative(x, y, z).getType() == Material.LANTERN) {
 									p.sendMessage("3 Material.LANTERN");
 									return;
 								}
@@ -103,6 +99,18 @@ public class BukkitTicks extends BukkitRunnable {
 					p.addPotionEffect(new PotionEffect(PotionEffectType.SLOW, 120, 0, false, false, false));
 					p.addPotionEffect(new PotionEffect(PotionEffectType.SLOW_DIGGING, 120, 0, false, false, false));
 					p.addPotionEffect(new PotionEffect(PotionEffectType.WEAKNESS, 120, 0, false, false, false));
+					if (w.hasStorm()) {
+						if (p.getHealth() >= 1) {
+							p.setHealth(p.getHealth() - 1);
+							p.playSound(p.getLocation(), Sound.ENTITY_PLAYER_HURT, 1.0F, 1.0F);
+						}
+						System.out.println(p.getHealth());
+						//p.sendTitle("", StringUtil.inColor(plugin.getMsgs().getFreezing()), 5, 5, 5);
+						p.sendTitle("", ChatColor.AQUA + "You are freezing!", 5, 5, 5);
+						if (p.getHealth() <= 1){
+							p.setHealth(0.0f);
+						}
+					}
 				}
 
 			}
@@ -125,11 +133,11 @@ public class BukkitTicks extends BukkitRunnable {
 	private boolean canSendMessage(UUID uuid) {
 		if (playersCooldown.containsKey(uuid)) {
 			if (playersCooldown.get(uuid) < System.currentTimeMillis()) {
-				playersCooldown.put(uuid, System.currentTimeMillis()+6000);
+				playersCooldown.put(uuid, System.currentTimeMillis()+60000);
 				return true;
 			}
 		} else {
-			playersCooldown.put(uuid, System.currentTimeMillis()+6000);
+			playersCooldown.put(uuid, System.currentTimeMillis()+60000);
 			return true;
 		}
 		return false;

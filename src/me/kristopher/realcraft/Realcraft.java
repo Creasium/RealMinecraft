@@ -12,7 +12,6 @@ import me.kristopher.realcraft.listener.InventoryListener;
 import me.kristopher.realcraft.objects.Messages;
 import me.kristopher.realcraft.objects.Recipe;
 import me.kristopher.realcraft.objects.WoodworkerConfig;
-import me.kristopher.realcraft.BukkitRun.BukkitTicks;
 
 public class Realcraft extends JavaPlugin{
 
@@ -31,7 +30,6 @@ public class Realcraft extends JavaPlugin{
 		Bukkit.getPluginManager().registerEvents(new AttackListener(this), this);
 		Bukkit.getPluginManager().registerEvents(new BlockListener(this), this);
 		Bukkit.getPluginManager().registerEvents(new InventoryListener(this), this);
-		//Bukkit.getPluginManager().registerEvents(new PlayerListener(this), this);
 		getLogger().info(ChatColor.GOLD + "-x+x-");
 		getLogger().info(ChatColor.GOLD + "realcraft Plguin by _Kristopher_");
 		getLogger().info(ChatColor.GOLD + "realcraft Plguin enabled");
@@ -46,9 +44,7 @@ public class Realcraft extends JavaPlugin{
 		getLogger().info(ChatColor.GOLD + "-x+x-");
 	}
 	
-	public Messages getMsgs() {
-		return msgs;
-	}
+	public Messages getMsgs() { return msgs; }
 	public WoodworkerConfig getWoodCfg() {
 		return woodCfg;
 	}
