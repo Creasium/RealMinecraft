@@ -45,7 +45,6 @@ public class BlockListener implements Listener {
 		ItemStack stackInHand = p.getInventory().getItemInMainHand();
 		ItemStack thickstick = stickCfg.getItem();
 
-		System.out.println(stackInHand.isSimilar(stickCfg.getItem()));
 		//Checking item in hand when you are breaking wooden blocks
 		if (b.getType().name().contains("LOG") || b.getType().name().contains("PLANKS") || b.getType().name().contains("OAK") || b.getType().name().contains("SPRUCE") || b.getType().name().contains("BIRCH") || b.getType().name().contains("JUNGLE") || b.getType().name().contains("ACACIA")) {
 			if (!b.getType().name().contains("LEAVES") && !b.getType().name().contains("SAPLING")) {
@@ -170,7 +169,6 @@ public class BlockListener implements Listener {
 			playersCooldown.put(uuid, System.currentTimeMillis()+1000);
 			return true;
 		}
-
 		return false;
 	}
 }

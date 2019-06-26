@@ -43,10 +43,5 @@ public class InventoryListener implements Listener{
 //				}
 //	        }
 //        }
-
-//		if (matrix[0].getType() == Material.STICK && matrix[1].getType() == Material.STICK
-//				&& matrix[2].getType() == Material.STICK && matrix[3].getType() == Material.STICK) {
-//			e.getInventory().setResult(stickCfg.getItem());
-//		}
 	}
 }

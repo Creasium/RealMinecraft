@@ -8,13 +8,11 @@ import me.kristopher.realcraft.Realcraft;
 import me.kristopher.realcraft.objects.Messages;
 import me.kristopher.realcraft.util.StringUtil;
 import org.bukkit.Material;
-import org.bukkit.entity.Chicken;
-import org.bukkit.entity.Entity;
-import org.bukkit.entity.Mob;
-import org.bukkit.entity.Player;
+import org.bukkit.entity.*;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.entity.EntityDamageByEntityEvent;
+import org.bukkit.event.entity.EntityDamageEvent;
 import org.bukkit.event.entity.EntityDeathEvent;
 import org.bukkit.inventory.ItemStack;
 
@@ -41,13 +39,16 @@ public class AttackListener implements Listener {
 
 	//Can attack mobs only with sword
 	@EventHandler
-	public void attackMobs(EntityDamageByEntityEvent e){
+	public void attackMobs(EntityDamageByEntityEvent e) {
 		Messages messagesConfig = plugin.getMsgs();
-		Player p = (Player) e.getDamager();
-		ItemStack pInv = p.getInventory().getItemInMainHand();
 
-		if (e.getDamager() instanceof Player){
-			if ( !pInv.getType().name().contains("SWORD")){
+		if (e.getCause().equals(EntityDamageEvent.DamageCause.PROJECTILE)) {
+			return;
+		}else if (e.getDamager() instanceof Player) {
+			Player p = (Player) e.getDamager();
+			ItemStack pInv = p.getInventory().getItemInMainHand();
+
+			if (!pInv.getType().name().contains("SWORD") && !pInv.getType().name().contains("AXE")) {
 				if (!(e.getEntity() instanceof Chicken)) {
 					e.setCancelled(true);
 
