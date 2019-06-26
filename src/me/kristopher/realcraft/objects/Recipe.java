@@ -17,6 +17,7 @@ public class Recipe{
 		this.plugin = plugin;
 	}
 
+	//Just a new recipes for woodworkers hammer, thick stick and rotten flash
 	public void registerRecipes() {
 		ShapedRecipe woodworkerZeroRecipe = new ShapedRecipe(new NamespacedKey(plugin, "woodworkerzero"), plugin.getWoodCfg().getItem());
 		ShapedRecipe woodworkerOneRecipe = new ShapedRecipe(new NamespacedKey(plugin, "woodworkerone"), plugin.getWoodCfg().getItem());

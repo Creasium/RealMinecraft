@@ -27,13 +27,16 @@ public class BukkitTicks extends BukkitRunnable {
 
 	public BukkitTicks(Realcraft plugin) {
 		this.plugin = plugin;
+	}
+
+	static {
 		playersCooldown = new HashMap<>();
 	}
 
 	public BukkitTicks() {
 	}
 
-	boolean day = false; //day/night boolean
+	boolean day = false; //day/night boolean default
 
 	@Override
 	public void run() {
@@ -96,12 +99,14 @@ public class BukkitTicks extends BukkitRunnable {
 							}
 						}
 					}
+					//Add some effects when player without heating
 					p.addPotionEffect(new PotionEffect(PotionEffectType.SLOW, 120, 0, false, false, false));
 					p.addPotionEffect(new PotionEffect(PotionEffectType.SLOW_DIGGING, 120, 0, false, false, false));
 					p.addPotionEffect(new PotionEffect(PotionEffectType.WEAKNESS, 120, 0, false, false, false));
 				}
 
 			}
+			//Armor (full set) weight
 			if (p.getInventory().getHelmet() == null || p.getInventory().getChestplate() == null || p.getInventory().getLeggings() == null || p.getInventory().getBoots() == null) {
 				p.setWalkSpeed(0.2f);
 				return;

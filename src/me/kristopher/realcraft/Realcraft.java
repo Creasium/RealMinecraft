@@ -9,7 +9,6 @@ import org.bukkit.plugin.java.JavaPlugin;
 import me.kristopher.realcraft.listener.AttackListener;
 import me.kristopher.realcraft.listener.BlockListener;
 import me.kristopher.realcraft.listener.InventoryListener;
-//import me.kristopher.realcraft.listener.PlayerListener;
 import me.kristopher.realcraft.objects.Messages;
 import me.kristopher.realcraft.objects.Recipe;
 import me.kristopher.realcraft.objects.WoodworkerConfig;

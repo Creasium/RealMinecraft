@@ -26,7 +26,7 @@ public class AttackListener implements Listener {
 		playersCooldown = new HashMap<>();
 	}
 
-	//Every mob will drop leather
+	//Every mob will drop leather with 40% chance
 	@EventHandler
 	public void entityDeath(EntityDeathEvent e){
 		Random random = new Random();
@@ -37,12 +37,12 @@ public class AttackListener implements Listener {
 		}
 	}
 
-	//Can attack mobs only with sword
+	//Can attack mobs only with special tools
 	@EventHandler
 	public void attackMobs(EntityDamageByEntityEvent e) {
 		Messages messagesConfig = plugin.getMsgs();
 
-		if (e.getCause().equals(EntityDamageEvent.DamageCause.PROJECTILE)) {
+		if (e.getCause().equals(EntityDamageEvent.DamageCause.PROJECTILE)) { //Just my magic code w(o.o)w
 			return;
 		}else if (e.getDamager() instanceof Player) {
 			Player p = (Player) e.getDamager();

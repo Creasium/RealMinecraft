@@ -2,7 +2,7 @@ package me.kristopher.realcraft.objects;
 
 import org.bukkit.plugin.Plugin;
 
-//Messages for plugin
+//Default messages for plugin
 public class Messages {
 	
 	private ConfigManager cfg;
