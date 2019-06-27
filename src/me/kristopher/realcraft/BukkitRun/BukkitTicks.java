@@ -53,6 +53,9 @@ public class BukkitTicks extends BukkitRunnable{
 						p.sendMessage(StringUtil.inColor("&cYou are too high. You need breathing effect."));
 						//p.sendMessage(StringUtil.inColor(plugin.getMsgs().getTooHigh()));
 					}
+				} else {
+					p.removePotionEffect(PotionEffectType.POISON);
+					p.removePotionEffect(PotionEffectType.CONFUSION);
 				}
 			} else if (p.getLocation().getBlockY() <= 200 || p.hasPotionEffect(PotionEffectType.POISON) || p.hasPotionEffect(PotionEffectType.CONFUSION)) { //But if lower than 200 all effects will disappear
 				p.removePotionEffect(PotionEffectType.POISON);
@@ -69,13 +72,13 @@ public class BukkitTicks extends BukkitRunnable{
 						for (int y = -(radius); y <= radius; y++) {
 							for (int z = -(radius); z <= radius; z++) {
 								if (loc.getBlock().getRelative(x, y, z).getType() == Material.CAMPFIRE) {
-									p.sendMessage("5 Material.CAMPFIRE");
+									p.sendMessage("|DEBUG| >>> 5 Material.CAMPFIRE"); //>>>>> DEBUG <<<<<
 									return;
 								} else if (loc.getBlock().getRelative(x, y, z).getType() == Material.LAVA) {
-									p.sendMessage("5 Material.LAVA");
+									p.sendMessage("|DEBUG| >>> 5 Material.LAVA"); //>>>>> DEBUG <<<<<
 									return;
 								} else if (loc.getBlock().getRelative(x, y, z).getType() == Material.MAGMA_BLOCK) {
-									p.sendMessage("5 MAGMA_BLOCK ");
+									p.sendMessage("|DEBUG| >>> 5 MAGMA_BLOCK "); //>>>>> DEBUG <<<<<
 									return;
 								}
 							}
@@ -86,16 +89,17 @@ public class BukkitTicks extends BukkitRunnable{
 						for (int y = -(lowradius); y <= lowradius; y++) {
 							for (int z = -(lowradius); z <= lowradius; z++) {
 								if (loc.getBlock().getRelative(x, y, z).getType() == Material.TORCH) {
-									p.sendMessage("3 Material.TORCH");
+									p.sendMessage("|DEBUG| >>> 3 Material.TORCH"); //>>>>> DEBUG <<<<<
 									return;
 								} else if (loc.getBlock().getRelative(x, y, z).getType() == Material.LANTERN) {
-									p.sendMessage("3 Material.LANTERN");
+									p.sendMessage("|DEBUG| >>> 3 Material.LANTERN"); //>>>>> DEBUG <<<<<
 									return;
 								}
 							}
 						}
 					}
 					//Add some effects when player without heating
+
 					p.addPotionEffect(new PotionEffect(PotionEffectType.SLOW, 120, 0, false, false, false));
 					p.addPotionEffect(new PotionEffect(PotionEffectType.SLOW_DIGGING, 120, 0, false, false, false));
 					p.addPotionEffect(new PotionEffect(PotionEffectType.WEAKNESS, 120, 0, false, false, false));
@@ -104,7 +108,7 @@ public class BukkitTicks extends BukkitRunnable{
 							p.setHealth(p.getHealth() - 1);
 							p.playSound(p.getLocation(), Sound.ENTITY_PLAYER_HURT, 1.0F, 1.0F);
 						}
-						System.out.println(p.getHealth());
+						System.out.println("|DEBUG| >>>" + p.getHealth()); //>>>>> DEBUG <<<<<
 						//p.sendTitle("", StringUtil.inColor(plugin.getMsgs().getFreezing()), 5, 5, 5);
 						p.sendTitle("", ChatColor.AQUA + "You are freezing!", 5, 5, 5);
 						if (p.getHealth() <= 1){

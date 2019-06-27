@@ -57,11 +57,13 @@ public class BlockListener implements Listener {
 				}
 			}
 		} else if (b.getType().name().contains("STONE") || (b.getType().name().contains("GRANITE")) || b.getType().name().contains("DIORITE") || b.getType().name().contains("ANDESITE") || b.getType().name().contains("ORE") || b.getType().name().contains("ANDESITE") || b.getType().name().contains("QUARTZ")) {
-			if (!p.getInventory().getItemInMainHand().getType().name().contains("PICKAXE")){
-				e.setCancelled(true);
+			if (!b.getType().name().contains("REDSTONE")){
+				if (!p.getInventory().getItemInMainHand().getType().name().contains("PICKAXE")){
+					e.setCancelled(true);
 
-				if (canSendMessage(p.getUniqueId()))
-					p.sendMessage(StringUtil.inColor(plugin.getMsgs().getCantBreakBlock()));
+					if (canSendMessage(p.getUniqueId()))
+						p.sendMessage(StringUtil.inColor(plugin.getMsgs().getCantBreakBlock()));
+				}
 			}
 		}
 

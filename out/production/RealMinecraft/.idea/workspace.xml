@@ -2,16 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0c55d5df-c56f-49bd-944d-0fe493f17ed9" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/RealMinecraft/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/RealMinecraft/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/RealMinecraft/me/kristopher/realcraft/Realcraft.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/RealMinecraft/me/kristopher/realcraft/Realcraft.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/RealMinecraft/me/kristopher/realcraft/listener/BlockListener.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/RealMinecraft/me/kristopher/realcraft/listener/BlockListener.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/RealMinecraft/me/kristopher/realcraft/objects/Messages.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/RealMinecraft/me/kristopher/realcraft/objects/Messages.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/RealMinecraft/me/kristopher/realcraft/objects/Recipe.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/RealMinecraft/me/kristopher/realcraft/objects/Recipe.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/me/kristopher/realcraft/BukkitRun/BukkitTicks.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/me/kristopher/realcraft/BukkitRun/BukkitTicks.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/me/kristopher/realcraft/Realcraft.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/me/kristopher/realcraft/Realcraft.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/me/kristopher/realcraft/listener/BlockListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/me/kristopher/realcraft/listener/BlockListener.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/me/kristopher/realcraft/objects/Messages.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/me/kristopher/realcraft/objects/Messages.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -44,7 +35,7 @@
         <entry file="file://$PROJECT_DIR$/src/me/kristopher/realcraft/objects/Messages.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="268">
-              <caret line="32" column="112" lean-forward="true" selection-start-line="32" selection-start-column="66" selection-end-line="32" selection-end-column="112" />
+              <caret line="32" column="112" selection-start-line="32" selection-start-column="66" selection-end-line="32" selection-end-column="112" />
               <folding>
                 <element signature="e#1473#1474#0" expanded="true" />
                 <element signature="e#1501#1502#0" expanded="true" />
@@ -64,8 +55,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/me/kristopher/realcraft/BukkitRun/BukkitTicks.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="378">
-              <caret line="52" column="104" selection-start-line="52" selection-start-column="104" selection-end-line="52" selection-end-column="104" />
+            <state relative-caret-position="322">
+              <caret line="71" column="105" selection-start-line="71" selection-start-column="105" selection-end-line="71" selection-end-column="105" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#1607#1608#0" expanded="true" />
@@ -284,7 +275,7 @@
       <workItem from="1561358223206" duration="11719000" />
       <workItem from="1561372487380" duration="11942000" />
       <workItem from="1561397575810" duration="32614000" />
-      <workItem from="1561557521914" duration="25173000" />
+      <workItem from="1561557521914" duration="26285000" />
     </task>
     <task id="LOCAL-00001" summary="First commit files">
       <created>1560861967231</created>
@@ -377,11 +368,18 @@
       <option name="project" value="LOCAL" />
       <updated>1561563903056</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="48% done">
+      <created>1561586199424</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1561586199424</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="153629000" />
+    <option name="totallyTimeSpent" value="154741000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -485,7 +483,8 @@
     <MESSAGE value="Finding heating source near player" />
     <MESSAGE value="Just a hot fix" />
     <MESSAGE value="Added few comments" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added few comments" />
+    <MESSAGE value="48% done" />
+    <option name="LAST_COMMIT_MESSAGE" value="48% done" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/.floo">
@@ -635,7 +634,7 @@
     <entry file="file://$PROJECT_DIR$/src/me/kristopher/realcraft/objects/Messages.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="268">
-          <caret line="32" column="112" lean-forward="true" selection-start-line="32" selection-start-column="66" selection-end-line="32" selection-end-column="112" />
+          <caret line="32" column="112" selection-start-line="32" selection-start-column="66" selection-end-line="32" selection-end-column="112" />
           <folding>
             <element signature="e#1473#1474#0" expanded="true" />
             <element signature="e#1501#1502#0" expanded="true" />
@@ -663,8 +662,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/me/kristopher/realcraft/BukkitRun/BukkitTicks.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="378">
-          <caret line="52" column="104" selection-start-line="52" selection-start-column="104" selection-end-line="52" selection-end-column="104" />
+        <state relative-caret-position="322">
+          <caret line="71" column="105" selection-start-line="71" selection-start-column="105" selection-end-line="71" selection-end-column="105" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#1607#1608#0" expanded="true" />
