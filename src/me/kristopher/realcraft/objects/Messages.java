@@ -11,9 +11,11 @@ public class Messages {
 	private String cantHitWithoutSword;
 	private String freezing;
 	private String tooHigh;
+	private String lowThirst;
+	private String thirstIs;
 
 	public Messages(Plugin plugin) {
-		cfg = new ConfigManager(plugin, "message");
+		cfg = new ConfigManager(plugin, "Messages");
 		cfg.create();
 		load();
 	}
@@ -24,13 +26,17 @@ public class Messages {
 		cfg.getConfiguration().addDefault("cantHitWithoutSword", "&cYou can't fight without special tool.");
 		cfg.getConfiguration().addDefault("Freezing", "&bYou are freezing!");
 		cfg.getConfiguration().addDefault("tooHigh", "&cYou are too high. You need breathing effect.");
+		cfg.getConfiguration().addDefault("lowThirst", "&cYou have to drink!");
+		cfg.getConfiguration().addDefault("ThirstIs", "&cYour thirst is: ");
 		cfg.getConfiguration().options().copyDefaults(true);
 		cfg.save();
 		cantBreakBlock = cfg.getConfiguration().getString("cantBreakBlock", "&cYou can't break this block by using this tool.");
 		cantPlaceWithoutHammer = cfg.getConfiguration().getString("cantPlaceWithoutHammer", "&cYou can't place this block without woodworker`s hammer.");
 		cantHitWithoutSword = cfg.getConfiguration().getString("cantHitWithoutSword", "&cYou can't fight without special tools.");
 		freezing = cfg.getConfiguration().getString("Freezing", "&bYou are freezing!");
-		tooHigh = cfg.getConfiguration().getString("getTooHigh", "&cYou are too high. You need breathing effect.");
+		tooHigh = cfg.getConfiguration().getString("getTooHigh", "&5You are too high. You need breathing effect.");
+		lowThirst = cfg.getConfiguration().getString("lowThirst", "&6You have to drink!");
+		thirstIs = cfg.getConfiguration().getString("thirstIs", "&6Your thirst is: ");
 	}
 	
 	public String getCantBreakBlock() {
@@ -51,5 +57,13 @@ public class Messages {
 
 	public String getTooHigh() {
 		return tooHigh;
+	}
+
+	public String getLowThirst() {
+		return lowThirst;
+	}
+
+	public String getThirstIs() {
+		return thirstIs;
 	}
 }

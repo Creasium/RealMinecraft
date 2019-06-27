@@ -6,7 +6,6 @@ import java.util.UUID;
 
 import me.kristopher.realcraft.Realcraft;
 import me.kristopher.realcraft.util.StringUtil;
-import me.kristopher.realcraft.objects.Messages;
 import org.bukkit.*;
 import org.bukkit.potion.PotionEffect;
 import org.bukkit.potion.PotionEffectType;
@@ -88,7 +87,7 @@ public class BukkitTicks extends BukkitRunnable{
 					for (int x = -(lowradius); x <= lowradius; x++) {
 						for (int y = -(lowradius); y <= lowradius; y++) {
 							for (int z = -(lowradius); z <= lowradius; z++) {
-								if (loc.getBlock().getRelative(x, y, z).getType() == Material.TORCH) {
+								if (loc.getBlock().getRelative(x, y, z).getType() == Material.TORCH || loc.getBlock().getRelative(x, y, z).getType() == Material.WALL_TORCH) {
 									p.sendMessage("|DEBUG| >>> 3 Material.TORCH"); //>>>>> DEBUG <<<<<
 									return;
 								} else if (loc.getBlock().getRelative(x, y, z).getType() == Material.LANTERN) {
@@ -131,6 +130,8 @@ public class BukkitTicks extends BukkitRunnable{
 			} else if (p.getInventory().getBoots().getType() == Material.CHAINMAIL_BOOTS && p.getInventory().getLeggings().getType() == Material.CHAINMAIL_LEGGINGS && p.getInventory().getChestplate().getType() == Material.CHAINMAIL_CHESTPLATE && p.getInventory().getHelmet().getType() == Material.CHAINMAIL_HELMET) {
 				p.setWalkSpeed(0.18f);
 			}
+
+
 		}
 	}
 	//Delay before messages
